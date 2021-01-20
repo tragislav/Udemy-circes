@@ -1,30 +1,30 @@
 "use strict";
 
-const arr = [2, 13, 62, 8, 10];
+let str = 'some';
+let strObj = new String(str);
 
-arr.sort(compareNum);
+// console.log(typeof(str));
+// console.log(typeof(strObj));
 
-// arr[99] = 0;
-// console.log(arr.length);
-console.log(arr);
+console.dir([1, 2, 3]);
 
-function compareNum(a, b) {
-    return a - b;
-}
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+        console.log('Hello');
+    }
+};
 
-arr.forEach(function(item, index, array) {
-    console.log(`index ${index}: ${item} inside array ${array}`);
-});
+const john = Object.create(soldier);
 
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
+// const john = {
+//     health: 100
+// };
 
-// for (let value of arr) {
-//     console.log(value);
-// }
+// john.__proto__ = soldier;
 
-const str = prompt("", "");
-const products = str.split(", ");
-products.sort();
-console.log(products.join('; '));
+// Object.setPrototypeOf(john, soldier);
+
+// console.log(john.armor);
+john.sayHello();

@@ -1,30 +1,45 @@
 "use strict";
 
-let str = 'some';
-let strObj = new String(str);
+// 1)
+// let x = 5; alert(x++);
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+// 2)
+// [ ] + false - null + true 
+// console.log([] + false - null + true); 
 
-console.dir([1, 2, 3]);
+// 3)
+// let y = 1;
+// let x = y = 2; 
+// alert(x); 
 
-const soldier = {
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello');
-    }
-};
+// 4)
+// console.log([] + 1 + 2);
 
-const john = Object.create(soldier);
+// 5)
+// alert( "1"[0] );
 
-// const john = {
-//     health: 100
-// };
+// 6)
+// console.log(2 && 1 && null && 0 && undefined);
+// && запинается на лжи
 
-// john.__proto__ = soldier;
+// 7)
+// !!( a && b ) и (a && b)
+// console.log(!!( 1 && 2 ) === (1 && 2)); //false
 
-// Object.setPrototypeOf(john, soldier);
+// 8)              3
+// || запинается на правде
+// alert( null || 2 && 3 || 4 );
 
-// console.log(john.armor);
-john.sayHello();
+// 9)
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a === b);
+
+// 10)
+// alert( typeof(+"Infinity") ); 
+
+// 11)
+// console.log("Ёжик" > "яблоко");
+
+// 12)
+// console.log(0 || "" || 2 || undefined || true || falsе );

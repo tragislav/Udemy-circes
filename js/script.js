@@ -46,32 +46,32 @@ const personalMovieDB = {
             console.log('А вот и нет!');
         }
     },
-    toggleVisibleMyDB: function() {
+    toggleVisibleMyDB: function () {
         if (this.privat) {
             this.privat = false;
-        } else{
+        } else {
             this.privat = true;
         }
     },
     writeYourGenres: function () {
         for (let i = 1; i < 2; i++) {
             // let genre = prompt(`Ваш любимый жанр под номером ${i}`, '');
-            
+
             // if (genre === '' || genre == null) {
             //     console.log('You wrote uncorect info or you wrote nothing');
             //     i--;
             // } else {
             //     personalMovieDB.genres[i - 1] = genre;
             // }
-            
+
             let genres = prompt(`Write you favorite genres`, '').toLowerCase();
             if (genres === '' || genres == null) {
-                    console.log('You wrote uncorect info or you wrote nothing');
-                    i--;
-                } else {
-                    this.genres = genres.split(', ');
-                    this.genres.sort();
-                }
+                console.log('You wrote uncorect info or you wrote nothing');
+                i--;
+            } else {
+                this.genres = genres.split(', ');
+                this.genres.sort();
+            }
         }
         this.genres.forEach((item, i) => {
             console.log(`"Любимый жанр ${i + 1} - это ${item}`);
